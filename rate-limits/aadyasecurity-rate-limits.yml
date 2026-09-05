@@ -1,0 +1,22 @@
+generated: '2026-09-05'
+method: searched
+source: https://www.judysecurity.ai/guides
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No published rate limits. AaDya Security / Judy Security exposes no public API
+  and no developer documentation, so there is nothing to rate limit publicly. The
+  two API guides the company publishes describe configuring Judy to call
+  ConnectWise PSA and Datto Autotask - those are third-party APIs and their limits
+  belong to those vendors, not to this provider. No X-RateLimit-*, RateLimit-* or
+  Retry-After header behaviour is documented anywhere on the public site.
+evidence:
+- url: https://www.judysecurity.ai/guides
+  status: 200
+- url: https://www.judysecurity.ai/guides/judy-security---connectwise-api-integration-setup-guide
+  status: 200
+  note: Documents ConnectWise's API, not a Judy Security API.
+- url: https://www.judysecurity.ai/guides/judy-security-autotask-api-integration-setup-guide
+  status: 200
+  note: Documents Datto Autotask's API, not a Judy Security API.

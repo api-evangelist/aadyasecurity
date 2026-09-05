@@ -1,0 +1,112 @@
+generated: '2026-09-05'
+method: probed
+source: live HTTPS probes of every host this record knows (2026-09-05)
+note: >-
+  Probed the five hosts the record knows: the marketing site (apex + www, Webflow),
+  the customer product portal, the partner portal (Kiflo PRM), and the Atlassian
+  Statuspage host. No first-party well-known document is served anywhere.
+  portal.judysecurity.ai and partners.judysecurity.ai answer 200 with their SPA
+  index.html for EVERY /.well-known/* path - a catch-all shell, not a document -
+  and are recorded as misses. The one real 200 is a security.txt on
+  status.judysecurity.ai, and it is Atlassian's own file served by the Statuspage
+  platform (Canonical: https://www.atlassian.com/.well-known/security.txt,
+  Contact: security@atlassian.com), NOT a Judy Security disclosure policy - so no
+  WellKnown or SecurityTxt pointer is emitted for it.
+hosts:
+- host: judysecurity.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: www.judysecurity.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: portal.judysecurity.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: HTML SPA shell (3,003 bytes, identical to /), not a document - treated as a miss
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: HTML SPA shell, not a document - treated as a miss
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    note: HTML SPA shell, not a document - treated as a miss
+  - path: /.well-known/api-catalog
+    status: 200
+    note: HTML SPA shell, not a document - treated as a miss
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: partners.judysecurity.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: HTML SPA shell (Kiflo PRM sign-in page), not a document - treated as a miss
+  - path: /.well-known/openid-configuration
+    status: 200
+    note: HTML SPA shell, not a document - treated as a miss
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    note: HTML SPA shell, not a document - treated as a miss
+  - path: /.well-known/api-catalog
+    status: 200
+    note: HTML SPA shell, not a document - treated as a miss
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    note: HTML SPA shell, not a document - treated as a miss
+  - path: /.well-known/agent-card.json
+    status: 200
+    note: HTML SPA shell, not a document - treated as a miss
+  - path: /.well-known/agent.json
+    status: 200
+    note: HTML SPA shell, not a document - treated as a miss
+- host: status.judysecurity.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: aadyasecurity-status-host-security.txt
+    note: >-
+      Real RFC 9116 document, but it is Atlassian's, served by the Statuspage
+      platform - Canonical points at www.atlassian.com and Contact is
+      security@atlassian.com. Not a Judy Security / AaDya Security disclosure
+      policy; no SecurityTxt or Security pointer emitted.
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404

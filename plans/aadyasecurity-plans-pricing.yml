@@ -1,0 +1,25 @@
+generated: '2026-09-05'
+method: searched
+source: https://www.judysecurity.ai/
+plan_count: 0
+plans: []
+note: >-
+  AaDya Security / Judy Security publishes no pricing page. https://www.judysecurity.ai/pricing
+  returns 404 and no /pricing entry appears in the site's own sitemap.xml. The
+  company sells almost entirely through MSP/MSSP channel partners and through
+  Carahsoft for public-sector buyers, so commercial terms are quoted rather than
+  listed; the only public commercial document is the standard terms and conditions
+  guide. There is no API product and therefore no API pricing, quota or overage to
+  record.
+evidence:
+- url: https://www.judysecurity.ai/pricing
+  status: 404
+- url: https://www.judysecurity.ai/sitemap.xml
+  status: 200
+  note: No /pricing URL present in the sitemap.
+- url: https://www.judysecurity.ai/partners
+  status: 200
+  note: Channel/partner routes to purchase, no listed prices.
+- url: https://www.carahsoft.com/judy-security
+  status: null
+  note: Government reseller listing referenced from the vendor site; not probed.

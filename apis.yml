@@ -1,17 +1,39 @@
 aid: aadyasecurity
-name: Aadyasecurity
-description: 'Aadyasecurity is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: AaDya Security (Judy Security)
+description: 'AaDya Security, founded in 2019 by Raffaele Mautone and rebranded in 2023
+  around its product as Judy Security, sells an all-in-one AI-driven cybersecurity
+  platform to small and midsize businesses, schools, non-profits and public-sector
+  buyers, almost entirely through MSP and MSSP partners. The Judy platform bundles
+  endpoint detection and response, DNS filtering, a password manager, a cloud SIEM
+  and XDR ("Blue Team"), automated compliance management and reporting, secure and
+  passwordless authentication, and security awareness training behind a single
+  Control Center. The company publishes no developer program, no public API
+  reference and no machine-readable API contract; its documented API surface is
+  outbound only - configuration guides for pushing Judy Portal tickets into
+  ConnectWise PSA and Datto Autotask using those vendors'' APIs. It does operate a
+  public Atlassian Statuspage for the platform.'
 url: https://raw.githubusercontent.com/api-evangelist/aadyasecurity/refs/heads/main/apis.yml
+image: https://cdn.prod.website-files.com/65f9c8c42e34897f931cc72d/66c78770b6ff7f165eb5ef33_Favicon.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
 x-tier-reason: harvest
+position: Consuming
 specificationVersion: '0.20'
 created: '2026-09-05'
 modified: '2026-09-05'
 tags:
 - Company
+- Security
+- Cybersecurity
+- Endpoint Detection and Response
+- SIEM
+- DNS Filtering
+- Password Management
+- Compliance
+- Security Awareness Training
+- Managed Service Providers
+- Small Business
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +42,57 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://equityzen.com/company/aadyasecurity
+  url: https://www.judysecurity.ai/
+- type: Support
+  url: https://www.judysecurity.ai/support
+- type: Blog
+  url: https://www.judysecurity.ai/blog
+- type: PrivacyPolicy
+  url: https://www.judysecurity.ai/privacy-policy
+- type: TermsOfService
+  url: https://www.judysecurity.ai/guides/judy-security-standard-terms-and-conditions
+- type: Login
+  url: https://portal.judysecurity.ai/
+- type: StatusPage
+  url: https://status.judysecurity.ai/
+- type: Lifecycle
+  url: lifecycle/aadyasecurity-lifecycle.yml
+- type: Plans
+  url: plans/aadyasecurity-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/aadyasecurity-rate-limits.yml
+- type: LLMsTxt
+  url: llms/aadyasecurity-llms.txt
+- type: DomainSecurity
+  url: security/aadyasecurity-domain-security.yml
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 7
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    AaDya Security ships as Judy Security and runs a customer portal, a Kiflo
+    partner portal and an Atlassian Statuspage, but no developer program of any
+    kind - www.judysecurity.ai/openapi.json, /swagger.json, /api-docs, /docs and
+    /llms.txt all 404 against the Webflow site, the same paths on
+    portal.judysecurity.ai and dns.judysecurity.ai return only SPA shells, the two
+    "API integration" guides it publishes document ConnectWise's and Autotask's
+    APIs rather than its own, and there is no GitHub organization under any
+    aadya/judy spelling.
+  evidence:
+  - url: https://www.judysecurity.ai/openapi.json
+    status: 404
+  - url: https://www.judysecurity.ai/api-docs
+    status: 404
+  - url: https://www.judysecurity.ai/llms.txt
+    status: 404
+  - url: https://portal.judysecurity.ai/openapi.json
+    status: 404
+  - url: https://api.github.com/orgs/judysecurity
+    status: 404
+  - url: https://www.judysecurity.ai/guides
+    status: 200
+  checked: '2026-09-05'

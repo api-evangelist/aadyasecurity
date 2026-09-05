@@ -1,0 +1,91 @@
+# AaDya Security (Judy Security)
+
+> AaDya Security, founded 2019 by Raffaele Mautone and rebranded in 2023 around its
+> product as Judy Security, sells an all-in-one AI-driven cybersecurity platform to
+> small and midsize businesses, schools, non-profits and public-sector buyers,
+> almost entirely through MSP and MSSP partners.
+
+<!--
+generated: 2026-09-05
+method: generated
+source: apis.yml + repo artifacts + live probes of judysecurity.ai (API Evangelist enrichment pipeline)
+-->
+
+## What this company publishes
+
+AaDya Security / Judy Security publishes **no public API, no developer portal, no
+API reference and no machine-readable API contract**. As of 2026-09-05 there is no
+OpenAPI, Swagger, GraphQL, AsyncAPI, gRPC/Protobuf, WSDL, MCP server or A2A agent
+card served on any host this company controls. Do not attempt to call a Judy
+Security API; there is not a documented one.
+
+The product's own backend hosts (login.judysecurity.ai, edge.judysecurity.ai,
+dns.judysecurity.ai) are private application endpoints for the Judy agents and the
+Judy Control Center. They are undocumented, unversioned and not offered for
+third-party integration.
+
+## Product
+
+Judy is a single-platform bundle for SMBs, delivered through channel partners:
+
+- Endpoint detection and response (Windows and macOS agents)
+- DNS filtering
+- Password manager
+- Cloud SIEM + XDR ("Blue Team")
+- Automated compliance management and reporting
+- Secure and passwordless authentication
+- Security awareness training
+- Judy Control Center (unified management, reporting and dashboards)
+
+## The documented API surface is outbound only
+
+The only API documentation the company publishes describes configuring Judy to push
+support tickets **into** third-party PSA systems using those vendors' APIs:
+
+- ConnectWise PSA integration setup: https://www.judysecurity.ai/guides/judy-security---connectwise-api-integration-setup-guide
+- Datto Autotask PSA integration setup: https://www.judysecurity.ai/guides/judy-security-autotask-api-integration-setup-guide
+
+Both guides cover credentials and permissions in the *partner's* system. Neither
+documents a Judy Security endpoint.
+
+## Machine-readable surfaces that do exist
+
+- Status (Atlassian Statuspage): https://status.judysecurity.ai/
+- Status summary JSON: https://status.judysecurity.ai/api/v2/summary.json
+- Status incident history RSS: https://status.judysecurity.ai/history.rss
+- Sitemap: https://www.judysecurity.ai/sitemap.xml
+
+The status endpoints are the Statuspage platform's API, not a first-party contract.
+
+## Links
+
+- Website: https://www.judysecurity.ai/
+- Product overview: https://www.judysecurity.ai/meet-judy
+- Guides, datasheets and whitepapers: https://www.judysecurity.ai/guides
+- Partners: https://www.judysecurity.ai/partners
+- Blog: https://www.judysecurity.ai/blog
+- News: https://www.judysecurity.ai/news
+- Support: https://www.judysecurity.ai/support
+- Contact: https://www.judysecurity.ai/contact-us
+- Customer portal (sign in): https://portal.judysecurity.ai/
+- Partner portal (sign in): https://partners.judysecurity.ai/signin
+- Terms and conditions: https://www.judysecurity.ai/guides/judy-security-standard-terms-and-conditions
+- Privacy policy: https://www.judysecurity.ai/privacy-policy
+- Public sector reseller: https://www.carahsoft.com/judy-security
+
+## Naming and domains
+
+The company was AaDya Security and is now Judy Security; the API Evangelist record
+is keyed `aadyasecurity` for continuity. The old apex `aadyasecurity.com` no longer
+resolves and `www.aadyasecurity.com` no longer serves the company's site; only
+`status.aadyasecurity.com` survives, 302-redirecting to status.judysecurity.ai.
+`aadyasecurity.io` is a parked lander and is not the company.
+
+## Not published
+
+No security.txt, no /.well-known/api-catalog, no openid-configuration, no
+oauth-authorization-server, no ai-plugin.json, no agent card, no llms.txt of the
+company's own, no public GitHub organization, no first-party SDK on npm, PyPI,
+RubyGems, crates.io, Maven Central, NuGet or pkg.go.dev, no public pricing page, no
+published rate limits, no changelog, no CLI, no sandbox, no bug bounty or
+vulnerability disclosure program, and no trust center.
